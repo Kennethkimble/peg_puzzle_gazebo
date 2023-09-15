@@ -9,7 +9,7 @@ from peg_puzzle_gazebo.spawn_params import SpawnParams
 
 from ament_index_python.packages import get_package_share_directory
 
-class HoleSpawner(Node):
+class PuzzleSpawner(Node):
     def __init__(self):
         super().__init__('part_spawner')
         
@@ -38,11 +38,11 @@ class HoleSpawner(Node):
 def main():
     rclpy.init()
 
-    spawner = HoleSpawner()
+    spawner = PuzzleSpawner()
 
-    path = os.path.join(get_package_share_directory("peg_puzzle_gazebo"), 'models', 'high_circ_hole', 'model.sdf')
+    path = os.path.join(get_package_share_directory("peg_puzzle_gazebo"), 'models', 'puzzle', 'model.sdf')
 
-    params = SpawnParams('high_circ_hole', path, xyz=[0, 0, .1])
+    params = SpawnParams('puzzle', path, xyz=[0, 0, .1])
 
     spawner.spawn_entity(params)
 

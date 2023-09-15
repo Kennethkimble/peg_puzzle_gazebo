@@ -162,3 +162,18 @@ class Pegboard:
                 base_row_str += slot_symbols[slot.slot_type] + slot_peg + " "
             print(base_row_str)
         print("")
+
+    def to_dict(self):
+        board_dict = {}
+        for plane in self.planes:
+            flat_slots = sum(plane.slots, [])
+            flat_types = [slot.slot_type for slot in flat_slots]
+            flat_types = map(lambda t:
+                    "HC" if t == 1 else
+                    "HS" if t == 2 else
+                    "HH" if t == 3 else
+                    "LC" if t == 4 else
+                    "LS" if t == 5 else
+                    "LH" if t == 6 else "ERROR", flat_types)
+            board_dict[plane.orientation] = list(flat_types)
+        return board_dict

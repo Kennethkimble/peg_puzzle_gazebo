@@ -1,0 +1,624 @@
+<sdf version='1.7'>
+  <model name='pegboard_puzzle'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.037667 0.037667 0.274667 0 -0 0</pose>
+        <mass>27</mass>
+        <inertia>
+          <ixx>27.2855</ixx>
+          <ixy>-8.9552</ixy>
+          <ixz>-8.9552</ixz>
+          <iyy>27.2712</iyy>
+          <iyz>-8.97669</iyz>
+          <izz>27.2999</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_7_collision'>
+        <pose>0.075119 -0.03694 0.23694 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_8_collision_1'>
+        <pose>0.00012 -0.036881 0.236881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_0_collision_2'>
+        <pose>0.15 -0.037 0.387 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_1_collision_3'>
+        <pose>0.075 -0.03694 0.38694 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_2_collision_4'>
+        <pose>0 -0.036881 0.386881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_3_collision_5'>
+        <pose>0.15006 -0.037 0.312 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_4_collision_6'>
+        <pose>0.07506 -0.03694 0.31194 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_5_collision_7'>
+        <pose>6e-05 -0.036881 0.311881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__left_wall_slot_6_collision_8'>
+        <pose>0.150119 -0.037 0.237 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_0_collision_9'>
+        <pose>-0.037 0 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_1_collision_10'>
+        <pose>-0.037 0.075 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_2_collision_11'>
+        <pose>-0.037 0.15 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_3_collision_12'>
+        <pose>-0.03694 0 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_4_collision_13'>
+        <pose>-0.03694 0.075 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_5_collision_14'>
+        <pose>-0.03694 0.15 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_6_collision_15'>
+        <pose>-0.036881 0 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_7_collision_16'>
+        <pose>-0.036881 0.075 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__right_wall_slot_8_collision_17'>
+        <pose>-0.036881 0.15 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_0_collision_18'>
+        <pose>0 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_1_collision_19'>
+        <pose>0 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_2_collision_20'>
+        <pose>0 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_3_collision_21'>
+        <pose>0.075 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_4_collision_22'>
+        <pose>0.075 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_5_collision_23'>
+        <pose>0.075 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_6_collision_24'>
+        <pose>0.15 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_7_collision_25'>
+        <pose>0.15 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__floor_slot_8_collision_26'>
+        <pose>0.15 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_7_visual'>
+        <pose>0.075119 -0.03694 0.23694 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_8_visual_1'>
+        <pose>0.00012 -0.036881 0.236881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_0_visual_2'>
+        <pose>0.15 -0.037 0.387 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_1_visual_3'>
+        <pose>0.075 -0.03694 0.38694 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_2_visual_4'>
+        <pose>0 -0.036881 0.386881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_3_visual_5'>
+        <pose>0.15006 -0.037 0.312 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_4_visual_6'>
+        <pose>0.07506 -0.03694 0.31194 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_5_visual_7'>
+        <pose>6e-05 -0.036881 0.311881 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__left_wall_slot_6_visual_8'>
+        <pose>0.150119 -0.037 0.237 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_0_visual_9'>
+        <pose>-0.037 0 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_1_visual_10'>
+        <pose>-0.037 0.075 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_2_visual_11'>
+        <pose>-0.037 0.15 0.387 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_3_visual_12'>
+        <pose>-0.03694 0 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_4_visual_13'>
+        <pose>-0.03694 0.075 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_5_visual_14'>
+        <pose>-0.03694 0.15 0.312 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_6_visual_15'>
+        <pose>-0.036881 0 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_7_visual_16'>
+        <pose>-0.036881 0.075 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__right_wall_slot_8_visual_17'>
+        <pose>-0.036881 0.15 0.237 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_0_visual_18'>
+        <pose>0 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_1_visual_19'>
+        <pose>0 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_2_visual_20'>
+        <pose>0 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_3_visual_21'>
+        <pose>0.075 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_4_visual_22'>
+        <pose>0.075 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_5_visual_23'>
+        <pose>0.075 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_6_visual_24'>
+        <pose>0.15 0 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_7_visual_25'>
+        <pose>0.15 0.075 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__floor_slot_8_visual_26'>
+        <pose>0.15 0.15 0.2 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <frame name='UNNAMED_10' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_7' attached_to='UNNAMED_10'/>
+    <frame name='UNNAMED_11' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_8' attached_to='UNNAMED_11'/>
+    <frame name='UNNAMED_3' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_0' attached_to='UNNAMED_3'/>
+    <frame name='UNNAMED_4' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_1' attached_to='UNNAMED_4'/>
+    <frame name='UNNAMED_5' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_2' attached_to='UNNAMED_5'/>
+    <frame name='UNNAMED_6' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_3' attached_to='UNNAMED_6'/>
+    <frame name='UNNAMED_7' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_4' attached_to='UNNAMED_7'/>
+    <frame name='UNNAMED_8' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_5' attached_to='UNNAMED_8'/>
+    <frame name='UNNAMED_9' attached_to='left_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='left_wall_slot_6' attached_to='UNNAMED_9'/>
+    <frame name='UNNAMED_0' attached_to='base_link'>
+      <pose>0.15 -0.037 0.387 -1.57 1.57 -0</pose>
+    </frame>
+    <frame name='left_wall' attached_to='UNNAMED_0'/>
+    <frame name='UNNAMED_12' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_0' attached_to='UNNAMED_12'/>
+    <frame name='UNNAMED_13' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_1' attached_to='UNNAMED_13'/>
+    <frame name='UNNAMED_14' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_2' attached_to='UNNAMED_14'/>
+    <frame name='UNNAMED_15' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_3' attached_to='UNNAMED_15'/>
+    <frame name='UNNAMED_16' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_4' attached_to='UNNAMED_16'/>
+    <frame name='UNNAMED_17' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_5' attached_to='UNNAMED_17'/>
+    <frame name='UNNAMED_18' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_6' attached_to='UNNAMED_18'/>
+    <frame name='UNNAMED_19' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_7' attached_to='UNNAMED_19'/>
+    <frame name='UNNAMED_20' attached_to='right_wall'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='right_wall_slot_8' attached_to='UNNAMED_20'/>
+    <frame name='UNNAMED_1' attached_to='base_link'>
+      <pose>-0.037 0 0.387 0 1.57 0</pose>
+    </frame>
+    <frame name='right_wall' attached_to='UNNAMED_1'/>
+    <frame name='UNNAMED_21' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_0' attached_to='UNNAMED_21'/>
+    <frame name='UNNAMED_22' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_1' attached_to='UNNAMED_22'/>
+    <frame name='UNNAMED_23' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_2' attached_to='UNNAMED_23'/>
+    <frame name='UNNAMED_24' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_3' attached_to='UNNAMED_24'/>
+    <frame name='UNNAMED_25' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_4' attached_to='UNNAMED_25'/>
+    <frame name='UNNAMED_26' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_5' attached_to='UNNAMED_26'/>
+    <frame name='UNNAMED_27' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_6' attached_to='UNNAMED_27'/>
+    <frame name='UNNAMED_28' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_7' attached_to='UNNAMED_28'/>
+    <frame name='UNNAMED_29' attached_to='floor'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='floor_slot_8' attached_to='UNNAMED_29'/>
+    <frame name='UNNAMED_2' attached_to='base_link'>
+      <pose>0 0 0.2 0 -0 0</pose>
+    </frame>
+    <frame name='floor' attached_to='UNNAMED_2'/>
+  </model>
+</sdf>

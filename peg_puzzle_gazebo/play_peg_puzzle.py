@@ -1,5 +1,5 @@
-import pegBoard
-import pegFeeder
+import peg_board as pegBoard
+import peg_feeder as pegFeeder
 
 class insertPeg:
     def __init__(self, plane, row, column, pegboard, peg):
