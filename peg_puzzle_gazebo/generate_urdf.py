@@ -9,6 +9,7 @@
 
 from odio_urdf import *
 import peg_board as pb
+import json
 
 config = {
         "mesh_dir_path": "model://puzzle/meshes/", #string
@@ -25,8 +26,9 @@ config = {
         "slot_pattern_origin": [0,0],           #xy
         "left_wall_origin": [0.15,-0.037,0.387,-1.57,1.57,0.00],   #xyz rpy
         "right_wall_origin": [-0.037,0,0.387,0,1.57,0],  #xyz rpy
-        "floor_origin": [0,0,0.2,0,0,0],          #xyz rpy
-        "output_file": "/tmp/my_puzzle.urdf"
+        "floor_origin": [0.15,0,0.2,0,0,1.57],          #xyz rpy
+        "urdf_file": "/tmp/my_puzzle.urdf",
+        "json_file": "/tmp/my_puzzle.json",
         }
 
 def populate_plane(slots, parent_link):
@@ -60,14 +62,28 @@ if __name__ == "__main__":
     pegboard = pb.Pegboard()
 
     urdf = Robot('pegboard_puzzle')
-    base = Link('base_link')
-    lw = Link('left_wall')
-    rw = Link('right_wall')
-    fl = Link('floor')
+    base = Link(Inertial(Origin([0.]*6),
+                       Mass(value=1.0),
+                       Inertia([1.,1.,1.,1.,1.,1.,])), name='base_link')
+    lw = Link(Inertial(Origin([0.]*6),
+                       Mass(value=1.0),
+                       Inertia([1.,1.,1.,1.,1.,1.,])), name='left_wall')
+    rw = Link(Inertial(Origin([0.]*6),
+                       Mass(value=1.0),
+                       Inertia([1.,1.,1.,1.,1.,1.,])), name='right_wall')
+    fl = Link(Inertial(Origin([0.]*6),
+                       Mass(value=1.0),
+                       Inertia([1.,1.,1.,1.,1.,1.,])), name='floor')
 
-    jbl = Joint(Parent(base.name), Child(lw.name), Origin(config['left_wall_origin']), type="fixed")
-    jbr = Joint(Parent(base.name), Child(rw.name), Origin(config['right_wall_origin']), type="fixed")
-    jbf = Joint(Parent(base.name), Child(fl.name), Origin(config['floor_origin']), type="fixed")
+    jbl = Joint(Parent(base.name),
+                Child(lw.name),
+                Origin(config['left_wall_origin']), name="base_to_left", type="fixed")
+    jbr = Joint(Parent(base.name),
+                Child(rw.name),
+                Origin(config['right_wall_origin']), name="base_to_right", type="fixed")
+    jbf = Joint(Parent(base.name),
+                Child(fl.name),
+                Origin(config['floor_origin']), name="base_to_floor", type="fixed")
     
     urdf(base, lw, rw, fl)
     urdf(jbl, jbr, jbf)
@@ -78,5 +94,40 @@ if __name__ == "__main__":
 
     pegboard.print_board(pegboard.planes)
 
-    with open(config['output_file'], 'w') as f:
-        f.write(str(urdf))
+    with open(config['json_file'], 'w') as f:
+        json.dump(pegboard.to_dict(), f)
+
+    with open(config['urdf_file'], 'w') as f:
+        tmp = ''.join(str(urdf).splitlines(keepends=True)[:-1]) 
+        tmp += """
+  <gazebo reference="base_to_left">
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+  <gazebo reference="base_to_right">
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+  <gazebo reference="base_to_floor">
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>
+        """ # reference frames for spawning pegs
+#  <gazebo>
+#    <frame name="left_wall" attached_to="base_link">
+#      <pose>0.15 -0.037 0.387 -1.57 1.57 0</pose>
+#    </frame>
+#    <frame name="right_wall" attached_to="base_link">
+#      <pose>-0.037 0 0.0387 0 1.57 0</pose>
+#    </frame>
+#    <frame name="floor" attached_to="base_link">
+#      <pose>0 0 0.2 0 0 0</pose>
+#    </frame>
+#  </gazebo>
+#</robot>
+#        """ # reference frames for spawning pegs
+        f.write(tmp)
