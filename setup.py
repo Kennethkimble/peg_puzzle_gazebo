@@ -49,7 +49,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
      'console_scripts': [
-             'spawn_object = peg_puzzle_gazebo.puzzle_spawner:main'
+             'spawn_object = peg_puzzle_gazebo.part_spawner:main'
      ],
    },
 )
