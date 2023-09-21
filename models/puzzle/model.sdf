@@ -1,0 +1,622 @@
+<sdf version='1.7'>
+  <model name='pegboard_puzzle'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>1</ixy>
+          <ixz>1</ixz>
+          <iyy>1</iyy>
+          <iyz>1</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='base_to_floor' type='fixed'>
+      <pose relative_to='base_link'>0.15 0 0.2 0 -0 1.57</pose>
+      <parent>base_link</parent>
+      <child>floor</child>
+      <axis>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='floor'>
+      <pose relative_to='base_to_floor'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.0675 0.0675 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>10.0388</ixx>
+          <ixy>-7.99789</ixy>
+          <ixz>10.0072</ixz>
+          <iyy>10.0245</iyy>
+          <iyz>-7.99999</iyz>
+          <izz>10.092</izz>
+        </inertia>
+      </inertial>
+      <collision name='floor_slot_0_collision'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_1_collision_1'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_2_collision_2'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_3_collision_3'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_4_collision_4'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_5_collision_5'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_6_collision_6'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_7_collision_7'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='floor_slot_8_collision_8'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='floor_slot_0_visual'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_1_visual_1'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_2_visual_2'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_3_visual_3'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_4_visual_4'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_5_visual_5'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_6_visual_6'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_7_visual_7'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='floor_slot_8_visual_8'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='base_to_left' type='fixed'>
+      <pose relative_to='base_link'>0.15 -0.037 0.387 -1.57 1.57 0</pose>
+      <parent>base_link</parent>
+      <child>left_wall</child>
+      <axis>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='left_wall'>
+      <pose relative_to='base_to_left'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.0675 0.0675 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>10.0388</ixx>
+          <ixy>-7.99789</ixy>
+          <ixz>10.0072</ixz>
+          <iyy>10.0245</iyy>
+          <iyz>-7.99999</iyz>
+          <izz>10.092</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_wall_slot_0_collision'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_1_collision_1'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_2_collision_2'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_3_collision_3'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_4_collision_4'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_5_collision_5'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_6_collision_6'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_7_collision_7'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='left_wall_slot_8_collision_8'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_wall_slot_0_visual'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_1_visual_1'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_2_visual_2'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_3_visual_3'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_4_visual_4'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_5_visual_5'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_6_visual_6'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_7_visual_7'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='left_wall_slot_8_visual_8'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='base_to_right' type='fixed'>
+      <pose relative_to='base_link'>-0.037 0 0.387 0 1.57 0</pose>
+      <parent>base_link</parent>
+      <child>right_wall</child>
+      <axis>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='right_wall'>
+      <pose relative_to='base_to_right'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.0675 0.0675 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>10.0388</ixx>
+          <ixy>-7.99789</ixy>
+          <ixz>10.0072</ixz>
+          <iyy>10.0245</iyy>
+          <iyz>-7.99999</iyz>
+          <izz>10.092</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_wall_slot_1_collision'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_2_collision_1'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_3_collision_2'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_4_collision_3'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_5_collision_4'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_6_collision_5'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_7_collision_6'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_8_collision_7'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='right_wall_slot_0_collision_8'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_wall_slot_1_visual'>
+        <pose>0 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_2_visual_1'>
+        <pose>0 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_3_visual_2'>
+        <pose>0.075 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_4_visual_3'>
+        <pose>0.075 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_5_visual_4'>
+        <pose>0.075 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowHexHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_6_visual_5'>
+        <pose>0.15 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_7_visual_6'>
+        <pose>0.15 0.075 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/lowCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_8_visual_7'>
+        <pose>0.15 0.15 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highCircleHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='right_wall_slot_0_visual_8'>
+        <pose>0 0 0 1.57 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://puzzle/meshes/highSquareHole.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>

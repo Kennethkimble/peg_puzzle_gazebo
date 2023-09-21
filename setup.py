@@ -39,7 +39,7 @@ setup(
     name=package_name,
     version='0.0.0',
     packages=[package_name],
-    data_files=package_files(data_files, ['models/', 'launch/', 'worlds/']),
+    data_files=package_files(data_files, ['models/', 'launch/']),
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='justin',
@@ -49,7 +49,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
      'console_scripts': [
-             'spawn_hole = peg_puzzle_gazebo.hole_spawner:main'
+             'spawn_object = peg_puzzle_gazebo.part_spawner:main'
      ],
    },
 )
