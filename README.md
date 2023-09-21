@@ -6,7 +6,9 @@ The following instructions has been tested using an [althack Docker container](h
 
 1. Install [Docker](https://docs.docker.com/engine/install/) and the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 2. Download a docker image with ROS2 and gazebo:
-	`docker pull althack/ros2:iron-cuda-gazebo-nvidia-2023-09-15`
+	```
+	docker pull althack/ros2:iron-cuda-gazebo-nvidia-2023-09-15
+ 	```
 	and run the container:
 	```
 	docker run -it \
@@ -19,34 +21,34 @@ The following instructions has been tested using an [althack Docker container](h
 	        --network host \
 	        --ipc=host althack/ros2:iron-cuda-gazebo-nvidia-2023-09-15
 	```
-3. Inside the container, clone [this](https://github.com/Pavel-P/odio_urdf) fork of [Odio URDF](https://github.com/hauptmech/odio_urdf), and install it with pip:
+4. Inside the container, clone [this](https://github.com/Pavel-P/odio_urdf) fork of [Odio URDF](https://github.com/hauptmech/odio_urdf), and install it with pip:
 	```
 	git clone https://github.com/Pavel-P/odio_urdf
 	cd odio_urdf
 	pip install -e .
 	```
-4. Create a colcon workspace containing this repository and build it:
+5. Create a colcon workspace containing this repository and build it:
 	```
 	mkdir -p /colcon_ws/src && cd /colcon_ws/src
 	git clone https://github.com/Kennethkimble/peg_puzzle_gazebo.git
 	cd .. && colcon build
 	```
-5. Launch Gazebo (using a ROS2 launch file to enable ROS spawning services):
+6. Launch Gazebo (using a ROS2 launch file to enable ROS spawning services):
 	```
 	ros2 launch peg_puzzle_gazebo gazebo.launch.py
 	```
-6. In a second shell, run the model spawning script inside the container:
+7. In a second shell, run the model spawning script inside the container:
 	```
 	docker exec -it bash <your-container-name>
 	cd /colcon_ws/src/peg_puzzle_gazebo
 	python3 peg_puzzle_gazebo/part_spawner.py
 	```
-7. To regenerate a new puzzle layout, generate a new URDF and update the Gazebo SDF:
+8. To regenerate a new puzzle layout, generate a new URDF and update the Gazebo SDF:
 	```
 	python3 peg_puzzle_gazebo/generate_urdf.py
 	bash peg_puzzle_gazebo/update_puzzle_sdf.bash
 	```
-8. In the first shell, rebuild the colcon workspace and re-launch Gazebo:
+9. In the first shell, rebuild the colcon workspace and re-launch Gazebo:
 	```
 	colcon build
 	ros2 launch peg_puzzle_gazebo gazebo.launch.py
